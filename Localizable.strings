@@ -1,0 +1,156 @@
+/*
+ Localizable.strings
+ mZero-iOS
+ 
+ Created by Wang Yu on 1/9/16.
+ Copyright © 2016 Shenzhen Maker Works Technology Co., Ltd. All rights reserved.
+ */
+"PLAY" = "运行";
+"PAUSED" = "暂停";
+"DESIGN" = "编辑";
+"Feedback" = "反馈";
+"Groups" = "社区";
+"Comment" = "评论";
+"Instruction" = "说明";
+"Send Feedback" = "发送反馈";
+"Wechat" = "微信";
+// community interface
+"Enter your comment" = "请写上您的反馈意见";
+"Email" = "电子邮件地址";
+"Information Needed" = "需要您的信息";
+"Please fill in both your email and your feedback" = "请填写您的电子邮件和反馈信息";
+
+"Give your project a new name" = "请为项目命名";
+"Delete" = "删除";
+"No Name" = "未命名";
+
+"Send Feedback" = "发送反馈";
+"Rename" = "重命名";
+
+"Feedback" = "反馈";
+"Groups" = "社区";
+"Comment" = "评论";
+"Instruction" = "说明";
+"Wechat" = "微信";
+
+
+
+
+// bluetooth connection
+"Tap an icon to connect a device" = "点击图标来连接蓝牙设备";
+"Connecting..." = "连接中";
+"Connection Failed." = "连接失败";
+"Connected" = "已连接";
+"Connected to " = "已连接到";
+"Disconnected. Tap an icon to connect a device" = "断开连接。点击图标重新连接蓝牙设备";
+"Confirm Disconnect" = "确认断开连接";
+"Disconnect from this device?" = "是否要断开此设备的连接？";
+"Disconnect" = "断开连接";
+"New Project" = "新项目";
+
+// designer
+"Port" = "端口";
+"Delete" = "删除";
+"Code" = "编程";
+
+
+// widgets
+"Move" = "移动";
+"ROBOT" = "机器人";
+"MOTORS" = "电机";
+"DC MOTOR" = "直流电机";
+"SERVO" = "舵机";
+
+"Display" = "显示";
+"Light" = "发光";
+"LED" = "发光二极管";
+"LED DISC" = "LED灯盘";
+"LED STRIP" = "LED灯带";
+"Marquee" = "跑马灯";
+"7 SEGMENT LED" = "7位数码管";
+
+"Sound" = "发声";
+"BUZZER" = "蜂鸣器";
+
+"Sense" = "感知";
+"DISTANCE" = "距离";
+"LIGHT" = "光线";
+"SOUND" = "声音";
+"TEMPERATURE" = "温度";
+"ULTRASONIC SENSOR" = "超声波距离传感器";
+"BRIGHTNESS SENSOR" = "光线亮度传感器";
+"LOUDNESS SENSOR" = "声音传感器";
+"TEMPERATURE SENSOR" = "温度传感器";
+"RADAR WARNING" = "雷达报警";
+"SPEED BAR" = "速度计";
+"LINEFOLLOW SENSOR STATE" = "巡线传感器状态";
+
+"Autopilot" = "自动驾驶";
+
+"Control" = "控制";
+"SWITCH STATE" = "虚拟开关状态";
+"PIR STATE" = "人体热释电传感器状态";
+"BUTTON STATE" = "虚拟按钮状态";
+"LIMIT SWITCH STATE" = "限位开关状态";
+"JOYSTICK X VALUE" = "摇杆X轴";
+"JOYSTICK Y VALUE" = "摇杆Y轴";
+"POTENTIOMETER" = "电位器";
+
+"Custom" = "自定义";
+"JOYSTICK" = "摇杆";
+"Button" = "按钮";
+"BUTTON" = "按钮";
+"SWITCH" = "开关";
+"SLIDER" = "滑块";
+"DISPLAY" = "显示";
+
+// name of toolbox items
+"Sprint" = "冲刺";
+"Random" = "颜色随机";
+"Buzz" = "鸣笛";
+
+// port selector
+"Cancel" = "取消";
+"Confirm" = "确认";
+"Where do you connect your electronics?" = "请根据电路连接选择对应的端口";
+// port selector - labels
+"Sound" = "音量";
+"Heat" = "温度";
+
+// common module
+"Button" = "按钮";
+
+// mode selector label
+"Manual" = "手动";
+"Obstacle-Avoiding" = "避障模式";
+"Line-Following" = "巡线模式";
+"Self-Balancing" = "自平衡";
+
+"AURIGA_NORMAL_FORM_PROMPT" = "Me Auriga - Land Raider / Dashing Raptor";
+"AURIGA_BALANCER_FORM_PROMPT" = "Me Auriga - Nervous Bird";
+"MEGAPI_NORMAL_FORM_PROMPT" = "Mega Pi - 一般形态";
+"MEGAPI_BALANCER_FORM_PROMPT" = "Mega Pi - 自平衡";
+
+"url_group_makeblock" = "http://openlab.makeblock.com/";
+"url_group_facebook" = "https://www.facebook.com/Makeblock/";
+
+// official CP
+"mBot Ranger - Racing Car" = "mBot Ranger - 疯狂赛车";
+"mBot Ranger - Mars Explorer" = "mBot Ranger - 火星探索者";
+"mBot Ranger - Nervous Bird" = "mBot Ranger - 疯狂的小鸟";
+"mBot Ranger - Color Bar" = "mBot Ranger - 色彩缤纷";
+"Ultimate2.0 - 3D Capture A" = "Ultimate2.0 -  3D扫描台A";
+"Ultimate2.0 - 3D Capture B" = "Ultimate2.0 - 3D扫描台B";
+"Ultimate2.0 - Camera Dolly" = "Ultimate2.0 - 移动摄影车";
+"Ultimate2.0 - Catapult Ram" = "Ultimate2.0 - 弹射锤";
+"Ultimate2.0 - Detecting Robot" = "Ultimate2.0 - 探测机器人";
+"Ultimate2.0 - Robotic Ant" = "Ultimate2.0 - 机械蚂蚁";
+"Ultimate2.0 - Robotic Arm Tank" = "Ultimate2.0 - 履带机械臂坦克机器人";
+"Ultimate2.0 - Robotic Bartender" = "Ultimate2.0 - 机械酒保机器人";
+"Ultimate2.0 - Rolling Tank" = "Ultimate2.0 - 翻滚坦克";
+"Ultimate2.0 - Self-Balancing Robot" = "Ultimate2.0\ - 自平衡机器人";
+"mbot" = "mbot";
+"Starter - Robot Kit" = "Starter - 坦克车";
+"Ultimate - Robotic Arm Tank" = "Ultimate - 机械臂坦克车";
+"Ultimate - Ball Launcher" = "Ultimate - 乒乓球弹射器";
+
