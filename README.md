@@ -1,5 +1,29 @@
-## 简介
-iOS本地化字符串与Excel互转的Python脚本工具
+## Localizable.strings2Excel
+Python command line tool for exchanging iOS Localizable.strings with excel file.
+
+中文请下翻页
+
+![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
+
+
+![excel to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etos.jpg)  
+
+
+## Usage
+
+###1.install pyexcelerator component
+
+change to pyexcelerator-0.6.4.1 directory,run ``` sudo python setup.py install ```
+
+![install pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
+
+###2.use python file
+python Localizable.py  ：exchange Localizable.strings to Localizable.xls
+
+python LocalizableBack.py  ：exchange LocalizableBack.xls to LocalizableBack.strings
+
+## Localizable.strings2Excel
+iOS本地化字符串与Excel互相转换的Python脚本工具
 
 ![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
 
@@ -16,8 +40,6 @@ iOS本地化字符串与Excel互转的Python脚本工具
 ![安装pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
 
 ###2.使用脚本
-python Localizable.py  ：把Localizable.strings中的所有key值填到Localizable.xls中
+python Localizable.py  ：把Localizable.strings转换成Localizable.xls
 
-python LocalizableBack.py  ：把LocalizableBack.xls中的所有值回填到LocalizableBack.strings中
-
-或安装pycharm ce IDE环境运行
+python LocalizableBack.py  ：把LocalizableBack.xls转换成LocalizableBack.strings
