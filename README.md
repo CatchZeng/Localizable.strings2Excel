@@ -1,10 +1,10 @@
 ## 简介
 iOS本地化字符串与Excel互转的Python脚本工具
 
-![strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/strings.jpg)   =>   ![excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/excel.jpg) 
+![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
 
 
-![excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/excelback.jpg)   =>   ![strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stringsback.jpg) 
+![excel to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etos.jpg)  
 
 
 ## 使用方法
