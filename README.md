@@ -1,5 +1,5 @@
 ## Localizable.strings2Excel
-Python command line tool for exchanging iOS Localizable.strings with excel file.
+Python command line tool for conversion between iOS Localizable.strings and excel file.
 
 中文请下翻页
 
