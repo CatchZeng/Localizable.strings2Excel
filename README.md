@@ -1,7 +1,7 @@
 ## Localizable.strings2Excel
 Python command line tool for conversion between iOS Localizable.strings and excel file.
 
-中文请下翻页
+中文请下翻
 
 ![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
 
