@@ -1,10 +1,3 @@
-/*
- Localizable.strings
- mZero-iOS
- 
- Created by Wang Yu on 1/9/16.
- Copyright © 2016 Shenzhen Maker Works Technology Co., Ltd. All rights reserved.
- */
 "PLAY" = "运行";
 "PAUSED" = "暂停";
 "DESIGN" = "编辑";
