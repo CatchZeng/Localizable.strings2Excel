@@ -19,4 +19,22 @@ for x in range(len(list)):
             list3 = string3.split('\"')
             ws.write(x,y,list3[1])
 
+
+
+file2 = codecs.open('en.js', 'r', 'utf-8')
+string2 = file2.read()
+file2.close()
+
+string2 = string2.replace('/* No comment provided by engineer. */', '').replace('\n', '')
+
+list2 = [x.split(' = ') for x in string2.split(';')]
+
+ws2 = workbook.add_sheet('en.js')
+
+for x in range(len(list2)):
+    for y in range(len(list2[x])):
+        if list2[x][y]:
+            ws2.write(x,y,list2[x][y])
+
+
 workbook.save('localizable.xls')
