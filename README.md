@@ -11,11 +11,15 @@ Python command line tool for conversion between iOS Localizable.strings and exce
 ## ChangeLog
 
 #### V0.2.0 
+
 1.fix bugs
+
 2.add -h(help command) for python files
+
 3.add -t(target file path )、-f(source file path) configuration for python files
 
 #### V0.1.0 
+
 add project
 
 
