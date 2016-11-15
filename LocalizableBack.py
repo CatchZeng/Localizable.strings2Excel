@@ -2,49 +2,104 @@
 
 import pyExcelerator
 import sys
+from optparse import OptionParser
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#Add Command Option
+def addParser():
+    parser = OptionParser()
 
-# 获取所有sheets
-sheets = pyExcelerator.parse_xls('LocalizableBack.xls')
-# 获取第一个sheet的所有数据
-sheet = sheets[0]
-tuple = sheet[1]
+    parser.add_option("-f", "--filePath",
+                      help="File (LocalizableBack.xls) Path.",
+                      metavar="filePath")
 
-length = len(tuple) / 2
+    parser.add_option("-t", "--targetFilePath",
+                      help="Target File (Localizable.strings) Path.",
+                      metavar="targetFilePath")
 
-# 记录第0列数据
-list0 = []
-for x in range(length):
-    if tuple[x, 0]:
-        string = tuple[x, 0]
-        list0.append(string)
+    (options, args) = parser.parse_args()
+    # print "options: %s, args: %s" % (options, args)
 
-print("第0列数据:\n")
-print(list0)
+    return options
 
-# 记录第1列数据
-list1 = []
-for x in range(length):
-    if tuple[x, 1]:
-        string = tuple[x, 1]
-        list1.append(string)
+# Start Convert Localizable.xls To Localizable.strings
+def startConvert(options):
+    filePath = options.filePath
+    targetFilePath = options.targetFilePath
 
-print("第1列数据:\n")
-print(list1)
+    if filePath is not None:
+        if (not filePath.endswith(".xls")):
+            print "File path %s is not correct,Please check it!" % (filePath)
+            return
 
-# 输出到Localizable.strings
+        print "Read localizable back xls file from %s" % (filePath)
 
-# 打开一个文件
-fo = open("LocalizableBack.strings", "wb")
+        # Get All Sheets
+        sheets = pyExcelerator.parse_xls(filePath)
+        # Get First Sheet All Data
+        sheet = sheets[0]
+        tuple = sheet[1]
 
-for x in range(len(list0)):
-    if list0[x] and list1[x]:
-        string0 = list0[x]
-        string1 = list1[x]
-        stringcontent = "\"" + string0 + "\" " + "= " + "\"" + string1 + "\";\n"
-        fo.write(stringcontent);
+        length = len(tuple) / 2
 
-# 关闭打开的文件
-fo.close()
+        # Record First Column Data
+        list0 = []
+        for x in range(length):
+            if tuple[x, 0]:
+                string = tuple[x, 0]
+                list0.append(string)
+
+        print("First Column:\n")
+        print(list0)
+
+        # Record Second Column Data
+        list1 = []
+        for x in range(length):
+            if tuple[x, 1]:
+                string = tuple[x, 1]
+                list1.append(string)
+
+        print("Second Column:\n")
+        print(list1)
+
+        if targetFilePath is not None:
+            print "Writing data to target file"
+
+            # Output To Localizable.strings
+            wirtePath = targetFilePath
+            if (not targetFilePath.endswith(".strings")):
+                wirtePath = targetFilePath + "/LocalizableBack.strings"
+
+            fo = open(wirtePath, "wb")
+
+            for x in range(len(list0)):
+                if list0[x] and list1[x]:
+                    string0 = list0[x]
+                    string1 = list1[x]
+                    stringcontent = "\"" + string0 + "\" " + "= " + "\"" + string1 + "\";\n"
+                    fo.write(stringcontent);
+
+            # Close File
+            fo.close()
+            print "Success! you can see strings file in %s" % (wirtePath)
+
+        else:
+            print "Target file path can not be empty! try -h for help."
+
+    else:
+        print "File path can not be empty! try -h for help."
+
+    return
+
+# Mian
+def main():
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+
+    options = addParser()
+    startConvert(options)
+
+    return
+
+
+#Start
+main()

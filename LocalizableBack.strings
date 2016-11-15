@@ -7,12 +7,10 @@
 "Instruction" = "说明";
 "Send Feedback" = "发送反馈";
 "Wechat" = "微信";
-// community interface
 "Enter your comment" = "请写上您的反馈意见";
 "Email" = "电子邮件地址";
 "Information Needed" = "需要您的信息";
 "Please fill in both your email and your feedback" = "请填写您的电子邮件和反馈信息";
-
 "Give your project a new name" = "请为项目命名";
 "Delete" = "删除";
 "No Name" = "未命名";
