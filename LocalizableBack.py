@@ -4,24 +4,23 @@ import pyExcelerator
 import sys
 from optparse import OptionParser
 
-#Add Command Option
+#Add command option
 def addParser():
     parser = OptionParser()
 
     parser.add_option("-f", "--filePath",
-                      help="File (LocalizableBack.xls) Path.",
+                      help="Localizable.xls file path.",
                       metavar="filePath")
 
     parser.add_option("-t", "--targetFilePath",
-                      help="Target File (Localizable.strings) Path.",
+                      help="Localizable.strings file path.",
                       metavar="targetFilePath")
 
     (options, args) = parser.parse_args()
-    # print "options: %s, args: %s" % (options, args)
 
     return options
 
-# Start Convert Localizable.xls To Localizable.strings
+# Start convert Localizable.xls to Localizable.strings
 def startConvert(options):
     filePath = options.filePath
     targetFilePath = options.targetFilePath
@@ -31,40 +30,40 @@ def startConvert(options):
             print "File path %s is not correct,Please check it!" % (filePath)
             return
 
-        print "Read localizable back xls file from %s" % (filePath)
+        print "Read Localizable.xls file from %s" % (filePath)
 
-        # Get All Sheets
+        # Get all sheets
         sheets = pyExcelerator.parse_xls(filePath)
-        # Get First Sheet All Data
+        # Get first sheet all data
         sheet = sheets[0]
         tuple = sheet[1]
 
         length = len(tuple) / 2
 
-        # Record First Column Data
+        # Record first column data
         list0 = []
         for x in range(length):
             if tuple[x, 0]:
                 string = tuple[x, 0]
                 list0.append(string)
 
-        print("First Column:\n")
+        print("First column:\n")
         print(list0)
 
-        # Record Second Column Data
+        # Record second column data
         list1 = []
         for x in range(length):
             if tuple[x, 1]:
                 string = tuple[x, 1]
                 list1.append(string)
 
-        print("Second Column:\n")
+        print("Second column:\n")
         print(list1)
 
         if targetFilePath is not None:
             print "Writing data to target file"
 
-            # Output To Localizable.strings
+            # Output to Localizable.strings
             wirtePath = targetFilePath
             if (not targetFilePath.endswith(".strings")):
                 wirtePath = targetFilePath + "/LocalizableBack.strings"
@@ -78,9 +77,9 @@ def startConvert(options):
                     stringcontent = "\"" + string0 + "\" " + "= " + "\"" + string1 + "\";\n"
                     fo.write(stringcontent);
 
-            # Close File
+            # Close file
             fo.close()
-            print "Success! you can see strings file in %s" % (wirtePath)
+            print "Convert successfully! you can see strings file in %s" % (wirtePath)
 
         else:
             print "Target file path can not be empty! try -h for help."

@@ -4,25 +4,24 @@ import codecs
 import pyExcelerator
 from optparse import OptionParser
 
-#Add Command Option
+#Add command option
 def addParser():
     parser = OptionParser()
 
     parser.add_option("-f", "--filePath",
-                      help="File (Localizable.strings) Path.",
+                      help="Localizable.strings file path.",
                       metavar="filePath")
 
     parser.add_option("-t", "--targetFilePath",
-                      help="Target File (Localizable.xls) Path.",
+                      help="Target(Localizable.xls) file path.",
                       metavar="targetFilePath")
 
     (options, args) = parser.parse_args()
-    # print "options: %s, args: %s" % (options, args)
 
     return options
 
 
-# Start Convert Localizable.strings To  Localizable.xls
+# Start convert localizable.strings to localizable.xls
 def startConvert(options):
     filePath = options.filePath
     targetFilePath = options.targetFilePath
@@ -34,16 +33,16 @@ def startConvert(options):
 
         print "Read Localizable.strings from %s" % (filePath)
 
-        # 1.Read Localizable.strings
+        # 1.Read localizable.strings
         file = codecs.open(filePath, 'r', 'utf-8')
         string = file.read()
         file.close()
 
-        # 2.Split By ";
+        # 2.Split by ";
         localStringList = string.split('\";')
         list = [x.split(' = ') for x in localStringList]
 
-        print "Read Finish"
+        print "Read Localizable.strings finish"
 
         if targetFilePath is not None:
             print "Writing data to target file"
@@ -51,29 +50,29 @@ def startConvert(options):
             workbook = pyExcelerator.Workbook()
             ws = workbook.add_sheet('Localizable.strings')
 
-            # Add Two Columns Data
+            # Add two columns data
             for x in range(len(list)):
                 for y in range(len(list[x])):
                     if list[x][y]:
-                        string3 = list[x][y]
+                        keyOrValue = list[x][y]
                         if y == 0:
-                            list3 = string3.split('\"')
-                            if(len(list3) > 1):
-                                ws.write(x, y, list3[1])
+                            keyString = keyOrValue.split('\"')
+                            if(len(keyString) > 1):
+                                ws.write(x, y, keyString[1])
                             else:
                                 print "This is an empty line"
                         else:
-                            value = string3[1:]
+                            value = keyOrValue[1:]
                             ws.write(x, y, value)
 
-            #Save To Target File Path
+            #Save to target file path
             filePath = targetFilePath
             if (not targetFilePath.endswith(".xls")):
                 filePath = targetFilePath + "/Localizable.xls"
 
             workbook.save(filePath)
 
-            print "Success! you can see xls in %s" % (filePath)
+            print "Convert successfully! you can see xls in %s" % (filePath)
 
         else:
             print "Target file path can not be empty! try -h for help."
@@ -90,7 +89,6 @@ def main():
     startConvert(options)
 
     return
-
 
 #Start
 main()
