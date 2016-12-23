@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d406dd13-7d37-46fc-b43f-aba5dea6037e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Localizable.strings2Excel.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LocalizableToStringXml.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/strings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Localizable.strings" afterPath="$PROJECT_DIR$/strings/Localizable.strings" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/LocalizableBack.strings" afterPath="$PROJECT_DIR$/strings/LocalizableBack.strings" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/LocalizableBack.xls" afterPath="$PROJECT_DIR$/xls/Localizable.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Localizable.py" afterPath="$PROJECT_DIR$/Localizable.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LocalizableBack.py" afterPath="$PROJECT_DIR$/LocalizableBack.py" />
-    </list>
+    <list default="true" id="d406dd13-7d37-46fc-b43f-aba5dea6037e" name="Default" comment="" />
     <ignored path="Localizable.strings2Excel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -38,28 +25,7 @@
     <favorites_list name="Localizable.strings2Excel" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocalizableToStringXml.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LocalizableToStringXml.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -593,18 +559,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xml/strings.xml">
+    <entry file="file://$PROJECT_DIR$/LocalizableToStringXml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+        <state relative-caret-position="375">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LocalizableToStringXml.py">
+    <entry file="file://$PROJECT_DIR$/xml/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="58" />
+        <state relative-caret-position="270">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding />
         </state>
       </provider>
