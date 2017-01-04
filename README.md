@@ -12,6 +12,10 @@ Python command line tool for conversion between iOS Localizable.strings and exce
 
 ## ChangeLog
 
+#### V0.4.0
+
+1.Support convert multiple languages meanwhile.
+
 #### V0.3.0
 
 1.Support Localizable.strings to android strings.xml file.
@@ -37,10 +41,15 @@ change to pyexcelerator-0.6.4.1 directory,run ``` sudo python setup.py install `
 
 ![install pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
 
-###2.use python file
-python Localizable.py -f xxx/xxx.strings -t xxx/xxx.xls :convert Localizable.strings to xls file
+###2.install xld component
 
-python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx.strings  :convert xls file to Localizable.strings file
+change to xlrd-1.0.0 directory,run ``` sudo python setup.py install ```
+
+
+###3.use python file
+python Localizable.py -f xxx/xxx -t xxx/xxx.xls :convert iOS Localizable.strings files to xls file
+
+python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx  :convert xls file to iOS Localizable.strings files & Android strings.xml files
 
 python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml : convert Localizable.strings to strings.xml file
 
@@ -56,6 +65,10 @@ iOS本地化文件（Localizable.strings）与Excel互相转换 & Localizable.st
 ![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stox.jpg) 
 
 ## ChangeLog
+
+#### V0.4.0
+
+1.支持多种语言一起转换
 
 #### V0.3.0
 
@@ -81,9 +94,15 @@ iOS本地化文件（Localizable.strings）与Excel互相转换 & Localizable.st
 
 ![安装pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
 
-###2.使用脚本
-python Localizable.py -f xxx/xxx.strings -t xxx/xxx.xls  ：把Localizable.strings转换成xls文件
 
-python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx.strings  ：把xls文件转换成Localizable.strings文件
+###2.安装xld组件
 
-python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml : 将 Localizable.strings转换成strings.xml文件
+切换到xlrd-1.0.0目录,执行sudo python setup.py install 安装
+
+###3.使用脚本
+
+python Localizable.py -f xxx/xxx -t xxx/xxx.xls :将多个国家的iOS Localizable.strings文件一起转换成xls文件
+
+python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx  :将xls文件转换成多个国家Localizable.strings文件 & Android 多个国家的strings.xml文件
+
+python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml : 将单个Localizable.strings转换成strings.xml文件

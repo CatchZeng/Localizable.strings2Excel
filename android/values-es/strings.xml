@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="ble_device_found">Dispositivo encontrado. Por favor, acérquese</string>
+   <string name="ble_is_not_turned_on">El Bluetooth no esta activado</string>
+   <string name="ble_connecting">Conectando…</string>
+   <string name="ble_connection_failed">Conexión fallida</string>
+   <string name="ble_connect_success">Conectado</string>
+</resources>

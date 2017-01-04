@@ -1,0 +1,5 @@
+"ble_device_found" = "Uređaj pronađen. Primaknite se bliže.";
+"ble_is_not_turned_on" = "Bluetooth nije uključen";
+"ble_connecting" = "Spajanje...";
+"ble_connection_failed" = "Spajanje neuspješno.";
+"ble_connect_success" = "Spojeno";
