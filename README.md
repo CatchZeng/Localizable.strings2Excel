@@ -3,10 +3,13 @@ Python command line tool for conversion between iOS Localizable.strings and exce
 
 中文请下翻
 
+#### Convert iOS Localizable.strings files to excel.
 ![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
 
+#### Convert excel file to iOS & Android Localizable files.
 ![excel to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etos.jpg)
 
+#### Convert iOS Localizable.strings file to Android strings.xml file.
 ![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stox.jpg)
 
 
@@ -66,10 +69,13 @@ python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml : convert Loc
 ## Localizable.strings2Excel
 iOS本地化文件（Localizable.strings）与Excel互相转换 & Localizable.strings 转换成android的strings.xml文件的Python脚本工具
 
+#### 将iOS多个国家的Localizable.strings转换成excel
 ![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
 
+#### 将excel转换成iOS多个国家的Localizable.strings以及Android的strings.xml
 ![excel to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etos.jpg) 
 
+#### 将单个iOS的Localizable.strings转换成Android的strings.xml
 ![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stox.jpg) 
 
 ## ChangeLog
