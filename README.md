@@ -38,18 +38,18 @@ Add project.
 
 ## Usage
 
-###1.install pyexcelerator component
+### 1.install pyexcelerator component
 
 change to pyexcelerator-0.6.4.1 directory,run ``` sudo python setup.py install ```
 
 ![install pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
 
-###2.install xld component
+### 2.install xld component
 
 change to xlrd-1.0.0 directory,run ``` sudo python setup.py install ```
 
 
-###3.use python file
+### 3.use python file
 python Localizable.py -f xxx/xxx -t xxx/xxx.xls :convert iOS Localizable.strings files to xls file
 
 ![stoeu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoeu.jpg)
@@ -102,18 +102,18 @@ iOS本地化文件（Localizable.strings）与Excel互相转换 & Localizable.st
 
 ## 使用方法
 
-###1.安装pyexcelerator组件
+### 1.安装pyexcelerator组件
 
 切换到pyexcelerator-0.6.4.1目录,执行sudo python setup.py install 安装
 
 ![安装pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
 
 
-###2.安装xld组件
+### 2.安装xld组件
 
 切换到xlrd-1.0.0目录,执行sudo python setup.py install 安装
 
-###3.使用脚本
+### 3.使用脚本
 
 python Localizable.py -f xxx/xxx -t xxx/xxx.xls :将多个国家的iOS Localizable.strings文件一起转换成xls文件
 
