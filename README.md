@@ -62,6 +62,11 @@ python Localizable.py -f xxx/xxx -t xxx/xxx.xls :convert iOS Localizable.strings
 ![stoeu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoeu.jpg)
 
 
+python LocalizableStringsXml.py -f xxx/xxx -t xxx/xxx.xls :convert Android strings.xml files to xls file
+
+![xmltoe](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xmltoe.jpg)
+
+
 python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx  :convert xls file to iOS Localizable.strings files & Android strings.xml files
 
 ![etosu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etosu.jpg)

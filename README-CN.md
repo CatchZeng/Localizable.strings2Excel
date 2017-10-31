@@ -58,6 +58,10 @@ python Localizable.py -f xxx/xxx -t xxx/xxx.xls :将多个国家的iOS Localizab
 
 ![stoeu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoeu.jpg)
 
+python LocalizableStringsXml.py -f xxx/xxx -t xxx/xxx.xls :将多个国家的Android  strings.xml文件一起转换成xls文件
+
+![xmltoe](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xmltoe.jpg)
+
 python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx  :将xls文件转换成多个国家Localizable.strings文件 & Android 多个国家的strings.xml文件
 
 ![etosu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etosu.jpg)
