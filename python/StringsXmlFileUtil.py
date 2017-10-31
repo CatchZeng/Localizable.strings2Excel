@@ -3,6 +3,7 @@
 
 import os
 from Log import Log
+import  xml.dom.minidom
 
 class StringsXmlFileUtil:
     'android strings.xml file util'
@@ -34,3 +35,25 @@ class StringsXmlFileUtil:
 
         fo.write("</resources>");
         fo.close()
+
+    @staticmethod
+    def getKeysAndValues(path):
+        if path is None:
+            Log.error('file path is None')
+            return
+
+        dom = xml.dom.minidom.parse(path)
+        root = dom.documentElement
+        itemlist = root.getElementsByTagName('string')
+
+        keys = []
+        values = []
+        for index in range(len(itemlist)):
+            item = itemlist[index]
+            key = item.getAttribute("name")
+            value = item.firstChild.data
+            Log.info("key:" + key + " value:" + value)
+            keys.append(key)
+            values.append(value)
+
+        return (keys,values)
