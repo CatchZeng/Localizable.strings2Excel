@@ -22,7 +22,7 @@ class LocalizableStringsFileUtil:
                 Log.error("Key:" + keys[x] + "\'s value is None. Index:" + str(x + 1))
                 continue
 
-            key = keys[x]
+            key = keys[x].strip()
             value = values[x]
             content = "\"" + key + "\" " + "= " + "\"" + value + "\";\n"
             fo.write(content);
