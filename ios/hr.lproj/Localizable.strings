@@ -3,3 +3,4 @@
 "ble_connecting" = "Spajanje...";
 "ble_connection_failed" = "Spajanje neuspješno.";
 "ble_connect_success" = "Spojeno";
+"more_parameters_example" = "example: parameter one %1$@ parameter two %2$@, parameter three %3$@.";

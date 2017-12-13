@@ -4,6 +4,7 @@
 import os
 from Log import Log
 import  xml.dom.minidom
+import re
 
 class StringsXmlFileUtil:
     'android strings.xml file util'
@@ -25,8 +26,8 @@ class StringsXmlFileUtil:
                 Log.error("Key:" + keys[x] + "\'s value is None. Index:" + str(x + 1))
                 continue
 
-            key = keys[x]
-            value = values[x]
+            key = keys[x].strip()
+            value = re.sub(r'(%\d\$)(@)', r'\1s', values[x])
             content = "   <string name=\"" + key + "\">" + value + "</string>\n"
             fo.write(content);
 

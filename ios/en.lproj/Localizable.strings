@@ -3,3 +3,4 @@
 "ble_connecting" = "Connecting...";
 "ble_connection_failed" = "Connection Failed.";
 "ble_connect_success" = "Connected";
+"more_parameters_example" = "example: parameter one %1$@ parameter two %2$@, parameter three %3$@.";
