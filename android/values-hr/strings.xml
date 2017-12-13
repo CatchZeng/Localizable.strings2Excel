@@ -5,4 +5,5 @@
    <string name="ble_connecting">Spajanje...</string>
    <string name="ble_connection_failed">Spajanje neuspješno.</string>
    <string name="ble_connect_success">Spojeno</string>
+   <string name="more_parameters_example">example: parameter one %1$s parameter two %2$s, parameter three %3$s.</string>
 </resources>

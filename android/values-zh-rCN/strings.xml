@@ -5,4 +5,5 @@
    <string name="ble_connecting">连接中</string>
    <string name="ble_connection_failed">连接失败</string>
    <string name="ble_connect_success">已连接</string>
+   <string name="more_parameters_example">例子: 参数一 %1$s 参数二 %2$s, 参数三 %3$s.</string>
 </resources>
