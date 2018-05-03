@@ -3,6 +3,8 @@ Python command line tool for conversion between iOS Localizable.strings and exce
 
 ## Buguibu's clone
 My version works in this way:
+
+### Extract strings to xls
 ```
 python ~/Projects/Localizable.strings2Excel/python/Localizable.py -f ~/Projects/app-root/folder-that-contains-all-*.lprjoj-directories/ -t ~/Desktop
 ```
@@ -14,6 +16,17 @@ This generates the following structure:
         * Main.string
         * InfoPlist.strings
 
+### Convert xls to strings
+```
+python ~/Projects/Localizable.strings2Excel/python/LocalizableBack.py -f ~/folder-that-contains-xls-by-lang-files/ -t ~/destination-path -i ios
+```
+This generates the following structure:
+* Desktop/iOS:
+    * en (or the langs you have in xls files)
+        * Localizable.string
+        * Main.string
+        * InfoPlist.strings
+        * 
 [中文请点击](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/README-CN.md)
 
 #### Convert iOS Localizable.strings files to excel.
