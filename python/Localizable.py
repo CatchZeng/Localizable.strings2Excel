@@ -29,31 +29,36 @@ def startConvert(options):
     targetFilePath = options.targetFilePath
 
     if directory is not None:
+        index = 0
         if targetFilePath is not None:
-            destinyDir = targetFilePath + "/strings-files-to-xls_"+ time.strftime("%Y%m%d_%H%M%S")
-            if not os.path.exists(destinyDir):
-                os.makedirs(destinyDir)
-            for parent, dirnames, unusedfilenames in os.walk(directory):
-                lprogDirs = [di for di in dirnames if di.endswith(".lproj")]
-                for dirname in lprogDirs:
-                    workbook = pyExcelerator.Workbook()
-                    for parent, dirnames2, filenames in os.walk(directory+'/'+dirname):
-                        stringFiles = [fi for fi in filenames if fi.endswith(".strings")]
-                        for stringfile in stringFiles:
-                            ws = workbook.add_sheet(stringfile)
+            workbook = pyExcelerator.Workbook()
+            ws = workbook.add_sheet('Localizable.strings')
 
-                            # Key & Value
-                            path = directory+dirname+'/' + stringfile
-                            (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(path)
-                            for keyIndex in range(len(keys)):
-                                key = keys[keyIndex]
-                                value = values[keyIndex]
-                                ws.write(keyIndex, 0, key)
-                                ws.write(keyIndex, 1, value)
-                    
-                    filePath = destinyDir +"/" + dirname.replace(".lproj", "") + ".xls"
-                    workbook.save(filePath)
-            print "Convert %s successfully! you can see xls file in %s" % (directory ,filePath)
+            for parent, dirnames, filenames in os.walk(directory):
+                for dirname in dirnames:
+                    # KeyName & CountryCode
+                    if index == 0:
+                        ws.write(0,0,'keyName')
+                    conturyCode = dirname.split('.')[0]
+                    ws.write(0,index+1,conturyCode)
+
+                    # Key & Value
+                    path = directory+'/'+dirname+'/Localizable.strings'
+                    (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(path)
+                    for x in range(len(keys)):
+                        key = keys[x]
+                        value = values[x]
+                        if (index == 0):
+                            ws.write(x+1, 0, key)
+                            ws.write(x+1, 1, value)
+                        else:
+                            ws.write(x+1, index + 1, value)
+                    index += 1
+
+            filePath = targetFilePath + "/Localizable.xls"
+            workbook.save(filePath)
+            print "Convert successfully! you can see xls file in %s" % (filePath)
+
         else:
             print "Target file path can not be empty! try -h for help."
     else:
