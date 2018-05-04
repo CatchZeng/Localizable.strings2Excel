@@ -4,6 +4,12 @@
 import os
 from Log import Log
 import codecs
+import re
+import io
+
+def removeComments(s):
+    for x in re.findall(r'("[^\n]*"(?!\\))|(//[^\n]*$|/(?!\\)\*[\s\S]*?\*(?!\\)/)',s,8):s=s.replace(x[1],'')
+    return s
 
 class LocalizableStringsFileUtil:
     'iOS Localizable.strings file util'
@@ -40,15 +46,30 @@ class LocalizableStringsFileUtil:
             return
 
         # 1.Read localizable.strings
-        file = codecs.open(path, 'r', 'utf-8')
-        string = file.read()
-        file.close()
+        #file = codecs.open(path, 'r', 'utf-16')
+        #file = io.open(path, 'r', encoding='utf-8')
+        encodings = ['utf-8', 'utf-16']
+        for e in encodings:
+            try:
+                file = codecs.open(path, 'r', encoding=e)
+                string = file.read()
+                file.close()
+            except UnicodeDecodeError:
+                print('got unicode error with %s , trying different encoding' % e)
+            else:
+                print('opening the file with encoding:  %s ' % e)
+                break
+#        string = file.read()
+#        file.close()
 
-        # 2.Split by ";
+        # 2.Remove comments
+        string = removeComments(string)
+
+        # 3.Split by ";
         localStringList = string.split('\";')
         list = [x.split(' = ') for x in localStringList]
 
-        # 3.Get keys & values
+        # 4.Get keys & values
         keys = []
         values = []
         for x in range(len(list)):

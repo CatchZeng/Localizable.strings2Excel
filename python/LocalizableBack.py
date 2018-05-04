@@ -5,6 +5,7 @@ from XlsFileUtil import XlsFileUtil
 from StringsXmlFileUtil import StringsXmlFileUtil
 from LocalizableStringsFileUtil import LocalizableStringsFileUtil
 from Log import Log
+import os
 
 def addParser():
     parser = OptionParser()
@@ -79,8 +80,10 @@ def convertiOSAndAndroidFile(table,targetFloderPath,iOSAdditional,androidAdditio
                 path = targetFloderPath + "/android/values/"
             StringsXmlFileUtil.writeToFile(keys,values,path,androidAdditional)
 
+
 def main():
     options = addParser()
     startConvert(options)
+    
 
 main()

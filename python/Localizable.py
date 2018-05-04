@@ -4,6 +4,7 @@ import os
 from optparse import OptionParser
 from LocalizableStringsFileUtil import LocalizableStringsFileUtil
 import pyExcelerator
+import time
 
 #Add command option
 def addParser():
