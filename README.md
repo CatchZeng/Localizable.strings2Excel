@@ -6,7 +6,7 @@ My version works in this way:
 
 ### Extract strings to xls
 ```
-python ~/Projects/Localizable.strings2Excel/python/Localizable.py -f ~/Projects/app-root/folder-that-contains-all-*.lprjoj-directories/ -t ~/Desktop
+python ~/Projects/Localizable.strings2Excel/python/Strings2XlsByLang.py -f ~/Projects/app-root/folder-that-contains-all-*.lprjoj-directories/ -t ~/Desktop
 ```
 This generates the following structure:
 
@@ -18,7 +18,7 @@ This generates the following structure:
 
 ### Convert xls to strings
 ```
-python ~/Projects/Localizable.strings2Excel/python/LocalizableBack.py -f ~/folder-that-contains-xls-by-lang-files/ -t ~/destination-path -i ios
+python ~/Projects/Localizable.strings2Excel/python/Xls2StringsByLang.py -f ~/folder-that-contains-xls-by-lang-files/ -t ~/destination-path -i ios
 ```
 This generates the following structure:
 * Desktop/iOS:
