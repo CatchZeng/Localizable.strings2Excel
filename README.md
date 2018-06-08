@@ -45,39 +45,77 @@ change to xlrd-1.0.0 directory,run ``` sudo python setup.py install ```
 
 #### Convert iOS Localizable.strings files to excel.
 
-```python
+```shell
 python Localizable.py -f xxx/xxx -t xxx/xxx.xls
-```
 
-![stoeu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoeu.jpg)
+$ python Localizable.py -h
+Usage: Localizable.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        Localizable.strings files directory.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (xls) Path.
+```
 
 #### Convert Android strings.xml files to excel.
 
-```python
+```shell
 python LocalizableStringsXml.py -f xxx/xxx -t xxx/xxx.xls
-```
 
-![xmltoe](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xmltoe.jpg)
+python LocalizableStringsXml.py -h
+Usage: LocalizableStringsXml.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        StringsXml files directory.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (xls) Path.
+```
 
 #### Convert excel file to iOS & Android Localizable files.
 
-```python
+```shell
 python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx
-```
 
-![etosu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etosu.jpg)
+$ python LocalizableBack.py -h
+Usage: LocalizableBack.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        original.xls File Path.
+  -t targetFloderPath, --targetFloderPath=targetFloderPath
+                        Target Floder Path.
+  -i iOSAdditional, --iOSAdditional=iOSAdditional
+                        iOS additional info.
+  -a androidAdditional, --androidAdditional=androidAdditional
+                        android additional info.
+```
 
 #### Convert iOS Localizable.strings file to Android strings.xml file.
 
-```python
+```shell
 python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml
-```
 
-![stoau](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoau.jpg)
+python LocalizableToStringXml.py -h
+Usage: LocalizableToStringXml.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        Localizable.strings File Path.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (strings.xml) Path.
+  -a androidAdditional, --androidAdditional=androidAdditional
+                        android additional info.
+```
 
 #### Extract strings to xls
 
-```python
+```shell
 python Strings2Xls.py -f xxx/xxx/ -t xxx/
 
 $ python Strings2Xls.py -h
@@ -93,7 +131,7 @@ Options:
 
 #### Convert xls to strings
 
-```python
+```shell
 python Xls2Strings.py -f xxx/xxx -t xxx/
 
 $ python Xls2Strings.py -h
