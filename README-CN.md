@@ -13,31 +13,15 @@ iOS本地化文件（Localizable.strings）与Excel互相转换 & Localizable.st
 #### 将单个iOS的Localizable.strings转换成Android的strings.xml
 ![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stox.jpg) 
 
+#### 将iOS多个国家的Localizable.strings转换成多个excel文件
+![extract strings to xls](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/strings2xls.jpg)
+
+#### 将多个excel文件转换成iOS多个国家的Localizable.strings
+![convert xls to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xls2strings.jpg)
+
 ## ChangeLog
 
-#### V0.5.0
-
-1.支持将Android多个国家的strings.xml转换成excel
-
-#### V0.4.0
-
-1.支持多种语言一起转换
-
-#### V0.3.0
-
-1.支持Localizable.strings转换成android的strings.xml.
-
-#### V0.2.0 
-
-1.Fix bugs.
-
-2.增加 -h(帮助命令)
-
-3.增加 -t(目标文件地址)、-f(源文件地址)的命令参数
-
-#### V0.1.0 
-
-加入工程
+[ChangeLog](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/CHANGELOG-CN.md)
 
 ## 使用方法
 
@@ -54,18 +38,113 @@ iOS本地化文件（Localizable.strings）与Excel互相转换 & Localizable.st
 
 ### 3.使用脚本
 
-python Localizable.py -f xxx/xxx -t xxx/xxx.xls :将多个国家的iOS Localizable.strings文件一起转换成xls文件
+#### 将iOS多个国家的Localizable.strings转换成excel
 
-![stoeu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoeu.jpg)
+```shell
+python Localizable.py -f xxx/xxx -t xxx/xxx.xls
 
-python LocalizableStringsXml.py -f xxx/xxx -t xxx/xxx.xls :将多个国家的Android  strings.xml文件一起转换成xls文件
+$ python Localizable.py -h
+Usage: Localizable.py [options]
 
-![xmltoe](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xmltoe.jpg)
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        Localizable.strings files directory.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (xls) Path.
+```
 
-python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx  :将xls文件转换成多个国家Localizable.strings文件 & Android 多个国家的strings.xml文件
+#### 将Android多个国家的strings.xml转换成excel
 
-![etosu](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etosu.jpg)
+```shell
+python LocalizableStringsXml.py -f xxx/xxx -t xxx/xxx.xls
 
-python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml : 将单个Localizable.strings转换成strings.xml文件
+python LocalizableStringsXml.py -h
+Usage: LocalizableStringsXml.py [options]
 
-![stoau](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoau.jpg)
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        StringsXml files directory.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (xls) Path.
+```
+
+#### 将excel转换成iOS多个国家的Localizable.strings以及Android的strings.xml
+
+```shell
+python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx
+
+$ python LocalizableBack.py -h
+Usage: LocalizableBack.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        original.xls File Path.
+  -t targetFloderPath, --targetFloderPath=targetFloderPath
+                        Target Floder Path.
+  -i iOSAdditional, --iOSAdditional=iOSAdditional
+                        iOS additional info.
+  -a androidAdditional, --androidAdditional=androidAdditional
+                        android additional info.
+```
+
+#### 将单个iOS的Localizable.strings转换成Android的strings.xml
+
+```shell
+python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml
+
+python LocalizableToStringXml.py -h
+Usage: LocalizableToStringXml.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        Localizable.strings File Path.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (strings.xml) Path.
+  -a androidAdditional, --androidAdditional=androidAdditional
+                        android additional info.
+```
+
+
+#### 将iOS多个国家的Localizable.strings转换成多个excel文件
+
+```shell
+python Strings2Xls.py -f xxx/xxx/ -t xxx/
+
+$ python Strings2Xls.py -h
+Usage: Strings2Xls.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        Localizable.strings files directory.
+  -t targetFilePath, --targetFilePath=targetFilePath
+                        Target File (xls) Path.
+```
+
+#### 将多个excel文件转换成iOS多个国家的Localizable.strings
+
+```shell
+python Xls2Strings.py -f xxx/xxx -t xxx/
+
+$ python Xls2Strings.py -h
+Usage: Xls2Strings.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        original.xls File Path.
+  -t targetFloderPath, --targetFloderPath=targetFloderPath
+                        Target Floder Path.
+  -i iOSAdditional, --iOSAdditional=iOSAdditional
+                        iOS additional info.
+  -a androidAdditional, --androidAdditional=androidAdditional
+                        android additional info.
+```
+
+## 鸣谢
+
+- [Buguibu](https://github.com/buguibu)

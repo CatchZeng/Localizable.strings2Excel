@@ -30,18 +30,18 @@ Python command line tool for conversion between iOS Localizable.strings and exce
 
 ## Usage
 
-### 1.install pyexcelerator component
+### 1.Install pyexcelerator component.
 
 change to pyexcelerator-0.6.4.1 directory,run ``` sudo python setup.py install ```
 
 ![install pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
 
-### 2.install xld component
+### 2.Install xld component.
 
 change to xlrd-1.0.0 directory,run ``` sudo python setup.py install ```
 
 
-### 3.use python file
+### 3.Use python file.
 
 #### Convert iOS Localizable.strings files to excel.
 
