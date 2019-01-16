@@ -48,9 +48,9 @@ def startConvert(options):
             # export(options)
 
         else:
-            print "Target file path can not be empty! try -h for help."
+            print "Target directory path can not be empty! try -h for help."
     else:
-        print "Localizable.strings files directory can not be empty! try -h for help."
+        print "Project files directory can not be empty! try -h for help."
 
 def export(options, filename):
     directory = options.filesDirectory

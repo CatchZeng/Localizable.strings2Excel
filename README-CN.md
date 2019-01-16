@@ -145,6 +145,37 @@ Options:
                         android additional info.
 ```
 
+#### 将iOS项目多语言中的所有*.strings转换成对应的多个excel文件
+
+```shell
+python StringsAll2Xls.py -f xxx/xxx/ -t xxx/
+
+$ python StringsAll2Xls.py -h
+Usage: StringsAll2Xls.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        Project files (strings) directory.
+  -t targetDirectory, --targetDirectory=targetDirectory
+                        Target files (xls) directory.
+```
+
+#### 反转，将转出的excel文件内容替换回原先的strings文件中
+```shell
+python XlsMatch2Strings.py -f xxx/ -t xxx/xxx/
+
+$ python XlsMatch2Strings.py -h
+Usage: XlsMatch2Strings.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        original.xls File Path.
+  -t targetFloderPath, --targetFloderPath=targetFloderPath
+                        Target Floder Path.
+```
+
 ## 鸣谢
 
 - [Buguibu](https://github.com/buguibu)

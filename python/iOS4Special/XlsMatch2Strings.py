@@ -33,7 +33,6 @@ def startConvert(options):
         xlsFilenames = [fi for fi in filenames if fi.endswith(".xls")]
         for xlsfile in xlsFilenames:
             xlsFileUtil = XlsFileUtil(folderPath+"/"+xlsfile)
-            langFolderPath = targetFloderPath + "/" + xlsfile.replace(".xls", "")
             for sheet in xlsFileUtil.getAllTables():
                 print "Sheet %s from %s" % (sheet.name, xlsfile)
                 keyRow = sheet.row_values(0)
