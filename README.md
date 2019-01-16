@@ -149,6 +149,37 @@ Options:
                         android additional info.
 ```
 
+#### Convert iOS Project's all mult language *.strings file to xls
+
+```shell
+python StringsAll2Xls.py -f xxx/xxx/ -t xxx/
+
+$ python StringsAll2Xls.py -h
+Usage: StringsAll2Xls.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filesDirectory, --filesDirectory=filesDirectory
+                        Project files (strings) directory.
+  -t targetDirectory, --targetDirectory=targetDirectory
+                        Target files (xls) directory.
+```
+
+#### Reverse，Convert the xls content match to the origin strings files
+```shell
+python XlsMatch2Strings.py -f xxx/ -t xxx/xxx/
+
+$ python XlsMatch2Strings.py -h
+Usage: XlsMatch2Strings.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f filePath, --filePath=filePath
+                        original.xls File Path.
+  -t targetFloderPath, --targetFloderPath=targetFloderPath
+                        Target Floder Path.
+```
+
 ## Thanks
 
 - [Buguibu](https://github.com/buguibu)
