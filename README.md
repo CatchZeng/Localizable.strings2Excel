@@ -7,41 +7,62 @@ Python command line tool for conversion between iOS Localizable.strings and exce
 ## Features
 
 #### Convert iOS Localizable.strings files to excel.
-![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)  
+
+![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)
 
 #### Convert Android strings.xml files to excel.
+
 ![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/atox.jpg)
 
 #### Convert excel file to iOS & Android Localizable files.
+
 ![excel to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etos.jpg)
 
 #### Convert iOS Localizable.strings file to Android strings.xml file.
+
 ![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stox.jpg)
 
 #### Extract strings to xls
+
 ![extract strings to xls](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/strings2xls.jpg)
 
 #### Convert xls to strings
+
 ![convert xls to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xls2strings.jpg)
-        
+
 ## ChangeLog
 
 [ChangeLog](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/CHANGELOG.md)
 
+## Environment
+
+### 1.Check pip(python package manager)
+
+```
+$ pip --version
+pip 19.0 from /Library/Python/2.7/site-packages/pip (python 2.7)
+```
+
+if pip is not installed
+
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python get-pip.py
+```
+
+### 2.Install pyexcelerator
+
+```
+sudo pip install pyExcelerator
+```
+
+### 3.Install xlrd
+
+```
+sudo pip install xlrd
+```
+
 ## Usage
-
-### 1.Install pyexcelerator component.
-
-change to pyexcelerator-0.6.4.1 directory,run ``` sudo python setup.py install ```
-
-![install pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
-
-### 2.Install xld component.
-
-change to xlrd-1.0.0 directory,run ``` sudo python setup.py install ```
-
-
-### 3.Use python file.
 
 #### Convert iOS Localizable.strings files to excel.
 
@@ -149,7 +170,7 @@ Options:
                         android additional info.
 ```
 
-#### Convert iOS Project's all mult language *.strings file to xls
+#### Convert iOS Project's all mult language \*.strings file to xls
 
 ```shell
 python StringsAll2Xls.py -f xxx/xxx/ -t xxx/
@@ -166,6 +187,7 @@ Options:
 ```
 
 #### Reverse，Convert the xls content match to the origin strings files
+
 ```shell
 python XlsMatch2Strings.py -f xxx/ -t xxx/xxx/
 

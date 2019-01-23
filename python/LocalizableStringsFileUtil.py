@@ -7,15 +7,18 @@ import codecs
 import re
 import io
 
+
 def removeComments(s):
-    for x in re.findall(r'("[^\n]*"(?!\\))|(//[^\n]*$|/(?!\\)\*[\s\S]*?\*(?!\\)/)',s,8):s=s.replace(x[1],'')
+    for x in re.findall(r'("[^\n]*"(?!\\))|(//[^\n]*$|/(?!\\)\*[\s\S]*?\*(?!\\)/)', s, 8):
+        s = s.replace(x[1], '')
     return s
+
 
 class LocalizableStringsFileUtil:
     'iOS Localizable.strings file util'
 
     @staticmethod
-    def writeToFile(keys,values,directory,additional):
+    def writeToFile(keys, values, directory, additional):
         if not os.path.exists(directory):
             os.makedirs(directory)
 
@@ -25,19 +28,19 @@ class LocalizableStringsFileUtil:
 
         for x in range(len(keys)):
             if values[x] is None or values[x] == '':
-                Log.error("Key:" + keys[x] + "\'s value is None. Index:" + str(x + 1))
+                Log.error("Key:" + keys[x] +
+                          "\'s value is None. Index:" + str(x + 1))
                 continue
 
             key = keys[x].strip()
             value = values[x]
             content = "\"" + key + "\" " + "= " + "\"" + value + "\";\n"
-            fo.write(content);
+            fo.write(content)
 
         if additional is not None:
             fo.write(additional)
 
         fo.close()
-
 
     @staticmethod
     def getKeysAndValues(path):
@@ -46,8 +49,6 @@ class LocalizableStringsFileUtil:
             return
 
         # 1.Read localizable.strings
-        #file = codecs.open(path, 'r', 'utf-16')
-        #file = io.open(path, 'r', encoding='utf-8')
         encodings = ['utf-8', 'utf-16']
         for e in encodings:
             try:
@@ -59,8 +60,6 @@ class LocalizableStringsFileUtil:
             else:
                 print('opening the file with encoding:  %s ' % e)
                 break
-#        string = file.read()
-#        file.close()
 
         # 2.Remove comments
         string = removeComments(string)
@@ -80,4 +79,4 @@ class LocalizableStringsFileUtil:
                 keys.append(key)
                 values.append(value)
 
-        return (keys,values)
+        return (keys, values)

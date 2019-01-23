@@ -6,7 +6,9 @@ from LocalizableStringsFileUtil import LocalizableStringsFileUtil
 import pyExcelerator
 import time
 
-#Add command option
+# Add command option
+
+
 def addParser():
     parser = OptionParser()
 
@@ -38,9 +40,9 @@ def startConvert(options):
                 for dirname in dirnames:
                     # KeyName & CountryCode
                     if index == 0:
-                        ws.write(0,0,'keyName')
+                        ws.write(0, 0, 'keyName')
                     conturyCode = dirname.split('.')[0]
-                    ws.write(0,index+1,conturyCode)
+                    ws.write(0, index+1, conturyCode)
 
                     # Key & Value
                     path = directory+'/'+dirname+'/Localizable.strings'
@@ -57,7 +59,8 @@ def startConvert(options):
 
             filePath = targetFilePath + "/Localizable.xls"
             workbook.save(filePath)
-            print "Convert successfully! you can see xls file in %s" % (filePath)
+            print "Convert successfully! you can see xls file in %s" % (
+                filePath)
 
         else:
             print "Target file path can not be empty! try -h for help."
@@ -68,5 +71,6 @@ def startConvert(options):
 def main():
     options = addParser()
     startConvert(options)
+
 
 main()
