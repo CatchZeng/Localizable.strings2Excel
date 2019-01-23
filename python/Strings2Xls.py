@@ -20,26 +20,68 @@ def addParser():
                       help="The directory where the excel(.xls) file will be saved.",
                       metavar="targetDir")
 
+    parser.add_option("-e", "--excelStorageForm",
+                      type="string",
+                      default="multiple",
+                      help="The excel(.xls) file storage forms including single(single file), multiple(multiple files), default is multiple.",
+                      metavar="excelStorageForm")
+
     (options, _) = parser.parse_args()
 
     return options
 
+#  convert .strings files to single xls file
 
-# Start convert .strings files to xls
-def startConvert(options):
-    stringsDir = options.stringsDir
-    targetDir = options.targetDir
 
-    print "Start converting"
+def convertToSingleFile(stringsDir, targetDir):
+    index = 0
 
-    if stringsDir is None:
-        print ".strings files directory can not be empty! try -h for help."
-        return
+    destDir = targetDir + "/strings-files-to-xls_" + \
+        time.strftime("%Y%m%d_%H%M%S")
+    if not os.path.exists(destDir):
+        os.makedirs(destDir)
 
-    if targetDir is None:
-        print "Target file directory can not be empty! try -h for help."
-        return
+    # Create xls sheet
+    for _, dirnames, _ in os.walk(stringsDir):
+        lprojDirs = [di for di in dirnames if di.endswith(".lproj")]
+        for dirname in lprojDirs:
+            for _, _, filenames in os.walk(stringsDir+'/'+dirname):
+                stringsFiles = [
+                    fi for fi in filenames if fi.endswith(".strings")]
+                for stringfile in stringsFiles:
+                    fileName = stringfile.replace(".strings", "")
+                    filePath = destDir + "/" + fileName + ".xls"
+                    if not os.path.exists(filePath):
+                        workbook = pyExcelerator.Workbook()
+                        ws = workbook.add_sheet(fileName)
+                        index = 0
+                        for dirname in dirnames:
+                            if index == 0:
+                                ws.write(0, 0, 'keyName')
+                            countryCode = dirname.replace(".lproj", "")
+                            ws.write(0, index+1, countryCode)
 
+                            path = stringsDir+'/' + dirname + '/' + stringfile
+                            (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(
+                                path)
+                            for x in range(len(keys)):
+                                key = keys[x]
+                                value = values[x]
+                                if (index == 0):
+                                    ws.write(x+1, 0, key)
+                                    ws.write(x+1, 1, value)
+                                else:
+                                    ws.write(x+1, index + 1, value)
+                            index += 1
+                        workbook.save(filePath)
+    print "Convert %s successfully! you can see xls file in %s" % (
+        stringsDir, destDir)
+
+
+#  convert .strings files to multiple xls files
+
+
+def convertToMultipleFiles(stringsDir, targetDir):
     destDir = targetDir + "/strings-files-to-xls_" + \
         time.strftime("%Y%m%d_%H%M%S")
     if not os.path.exists(destDir):
@@ -55,7 +97,6 @@ def startConvert(options):
                 for stringfile in stringsFiles:
                     ws = workbook.add_sheet(stringfile)
 
-                    # Key & Value
                     path = stringsDir+dirname+'/' + stringfile
                     (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(
                         path)
@@ -70,6 +111,28 @@ def startConvert(options):
 
     print "Convert %s successfully! you can see xls file in %s" % (
         stringsDir, filePath)
+
+# Start convert .strings files to xls
+
+
+def startConvert(options):
+    stringsDir = options.stringsDir
+    targetDir = options.targetDir
+
+    print "Start converting"
+
+    if stringsDir is None:
+        print ".strings files directory can not be empty! try -h for help."
+        return
+
+    if targetDir is None:
+        print "Target file directory can not be empty! try -h for help."
+        return
+
+    if options.excelStorageForm == "single":
+        convertToSingleFile(stringsDir, targetDir)
+    else:
+        convertToMultipleFiles(stringsDir, targetDir)
 
 
 def main():
