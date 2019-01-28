@@ -3,7 +3,7 @@
 import codecs
 from optparse import OptionParser
 from StringsXmlFileUtil import StringsXmlFileUtil
-from LocalizableStringsFileUtil import  LocalizableStringsFileUtil
+from StringsFileUtil import  StringsFileUtil
 
 #Add command option
 def addParser():
@@ -35,7 +35,7 @@ def startConvert(options):
     if filePath is not None:
         print "Read Localizable.strings file from %s" % (filePath)
 
-        (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(filePath)
+        (keys, values) = StringsFileUtil.getKeysAndValues(filePath)
 
         print "Read Localizable.strings finish"
 

@@ -3,7 +3,7 @@
 from optparse import OptionParser
 from XlsFileUtil import XlsFileUtil
 from StringsXmlFileUtil import StringsXmlFileUtil
-from LocalizableStringsFileUtil import LocalizableStringsFileUtil
+from StringsFileUtil import StringsFileUtil
 from Log import Log
 import os
 
@@ -71,7 +71,7 @@ def convertiOSAndAndroidFile(table, targetFloderPath, iOSAdditional, androidAddi
             values = table.col_values(index)
             del values[0]
             # iOS
-            LocalizableStringsFileUtil.writeToFile(
+            StringsFileUtil.writeToFile(
                 keys, values, targetFloderPath + "/ios/"+languageName+".lproj/", "Localizable.strings", iOSAdditional)
 
             # Android

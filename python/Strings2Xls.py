@@ -2,7 +2,7 @@
 
 import os
 from optparse import OptionParser
-from LocalizableStringsFileUtil import LocalizableStringsFileUtil
+from StringsFileUtil import StringsFileUtil
 import pyExcelerator
 import time
 
@@ -62,7 +62,7 @@ def convertToSingleFile(stringsDir, targetDir):
                             ws.write(0, index+1, countryCode)
 
                             path = stringsDir+'/' + dirname + '/' + stringfile
-                            (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(
+                            (keys, values) = StringsFileUtil.getKeysAndValues(
                                 path)
                             for x in range(len(keys)):
                                 key = keys[x]
@@ -98,7 +98,7 @@ def convertToMultipleFiles(stringsDir, targetDir):
                     ws = workbook.add_sheet(stringfile)
 
                     path = stringsDir+dirname+'/' + stringfile
-                    (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(
+                    (keys, values) = StringsFileUtil.getKeysAndValues(
                         path)
                     for keyIndex in range(len(keys)):
                         key = keys[keyIndex]

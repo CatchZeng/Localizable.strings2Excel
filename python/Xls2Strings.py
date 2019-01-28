@@ -3,7 +3,7 @@
 from optparse import OptionParser
 from XlsFileUtil import XlsFileUtil
 from StringsXmlFileUtil import StringsXmlFileUtil
-from LocalizableStringsFileUtil import LocalizableStringsFileUtil
+from StringsFileUtil import StringsFileUtil
 from Log import Log
 import os
 import time
@@ -56,7 +56,7 @@ def convertFromSingleForm(options, fileDir, targetDir):
                 languageName = firstRow[index]
                 values = table.col_values(index)
                 del values[0]
-                LocalizableStringsFileUtil.writeToFile(
+                StringsFileUtil.writeToFile(
                     keys, values, targetDir + "/iOS/"+languageName+".lproj/", file.replace(".xls", "")+".strings", options.iOSAdditional)
 
 

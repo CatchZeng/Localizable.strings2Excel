@@ -67,7 +67,7 @@
         <option value="$PROJECT_DIR$/python/Localizable.py" />
         <option value="$PROJECT_DIR$/python/LocalizableToStringXml.py" />
         <option value="$PROJECT_DIR$/python/LocalizableBack.py" />
-        <option value="$PROJECT_DIR$/python/LocalizableStringsFileUtil.py" />
+        <option value="$PROJECT_DIR$/python/StringsFileUtil.py" />
         <option value="$PROJECT_DIR$/python/StringsXmlFileUtil.py" />
         <option value="$PROJECT_DIR$/python/LocalizableStringsXml.py" />
       </list>
@@ -759,7 +759,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/LocalizableStringsFileUtil.py">
+    <entry file="file://$PROJECT_DIR$/python/StringsFileUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
@@ -914,7 +914,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/LocalizableStringsFileUtil.py">
+    <entry file="file://$PROJECT_DIR$/python/StringsFileUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />

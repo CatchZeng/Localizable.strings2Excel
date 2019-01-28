@@ -14,7 +14,7 @@ def removeComments(s):
     return s
 
 
-class LocalizableStringsFileUtil:
+class StringsFileUtil:
     'iOS Localizable.strings file util'
 
     @staticmethod

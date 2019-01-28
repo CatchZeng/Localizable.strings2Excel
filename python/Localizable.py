@@ -2,7 +2,7 @@
 
 import os
 from optparse import OptionParser
-from LocalizableStringsFileUtil import LocalizableStringsFileUtil
+from StringsFileUtil import StringsFileUtil
 import pyExcelerator
 import time
 
@@ -46,7 +46,7 @@ def startConvert(options):
 
                     # Key & Value
                     path = directory+'/'+dirname+'/Localizable.strings'
-                    (keys, values) = LocalizableStringsFileUtil.getKeysAndValues(path)
+                    (keys, values) = StringsFileUtil.getKeysAndValues(path)
                     for x in range(len(keys)):
                         key = keys[x]
                         value = values[x]
