@@ -17,7 +17,7 @@ def addParser():
                       metavar="stringsDir")
 
     parser.add_option("-t", "--targetDir",
-                      help="The directory where the excel(.xls) file will be saved.",
+                      help="The directory where the excel(.xls) files will be saved.",
                       metavar="targetDir")
 
     parser.add_option("-e", "--excelStorageForm",

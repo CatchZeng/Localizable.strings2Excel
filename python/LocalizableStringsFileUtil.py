@@ -18,13 +18,13 @@ class LocalizableStringsFileUtil:
     'iOS Localizable.strings file util'
 
     @staticmethod
-    def writeToFile(keys, values, directory, additional):
+    def writeToFile(keys, values, directory, name, additional):
         if not os.path.exists(directory):
             os.makedirs(directory)
 
-        Log.info("Creating iOS file:" + directory+"Localizable.strings")
+        Log.info("Creating iOS file:" + directory + name)
 
-        fo = open(directory+"Localizable.strings", "wb")
+        fo = open(directory + "/" + name, "wb")
 
         for x in range(len(keys)):
             if values[x] is None or values[x] == '':

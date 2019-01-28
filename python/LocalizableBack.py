@@ -7,6 +7,7 @@ from LocalizableStringsFileUtil import LocalizableStringsFileUtil
 from Log import Log
 import os
 
+
 def addParser():
     parser = OptionParser()
 
@@ -20,7 +21,7 @@ def addParser():
 
     parser.add_option("-i", "--iOSAdditional",
                       help="iOS additional info.",
-                      metavar = "iOSAdditional")
+                      metavar="iOSAdditional")
 
     parser.add_option("-a", "--androidAdditional",
                       help="android additional info.",
@@ -49,7 +50,8 @@ def startConvert(options):
 
         # iOS & Android
         table = xlsFileUtil.getTableByIndex(0)
-        convertiOSAndAndroidFile(table,targetFloderPath,iOSAdditional,androidAdditional)
+        convertiOSAndAndroidFile(
+            table, targetFloderPath, iOSAdditional, androidAdditional)
 
         Log.info("Finished,go to see it -> "+targetFloderPath)
 
@@ -57,7 +59,7 @@ def startConvert(options):
         Log.error("file path is None！use -h for help.")
 
 
-def convertiOSAndAndroidFile(table,targetFloderPath,iOSAdditional,androidAdditional):
+def convertiOSAndAndroidFile(table, targetFloderPath, iOSAdditional, androidAdditional):
     firstRow = table.row_values(0)
 
     keys = table.col_values(0)
@@ -69,7 +71,8 @@ def convertiOSAndAndroidFile(table,targetFloderPath,iOSAdditional,androidAdditio
             values = table.col_values(index)
             del values[0]
             # iOS
-            LocalizableStringsFileUtil.writeToFile(keys,values,targetFloderPath + "/ios/"+languageName+".lproj/",iOSAdditional)
+            LocalizableStringsFileUtil.writeToFile(
+                keys, values, targetFloderPath + "/ios/"+languageName+".lproj/", "Localizable.strings", iOSAdditional)
 
             # Android
             if languageName == "zh-Hans":
@@ -78,12 +81,13 @@ def convertiOSAndAndroidFile(table,targetFloderPath,iOSAdditional,androidAdditio
             path = targetFloderPath + "/android/values-"+languageName+"/"
             if languageName == 'en':
                 path = targetFloderPath + "/android/values/"
-            StringsXmlFileUtil.writeToFile(keys,values,path,androidAdditional)
+            StringsXmlFileUtil.writeToFile(
+                keys, values, path, androidAdditional)
 
 
 def main():
     options = addParser()
     startConvert(options)
-    
+
 
 main()
