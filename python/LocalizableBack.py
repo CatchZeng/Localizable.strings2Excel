@@ -82,7 +82,7 @@ def convertiOSAndAndroidFile(table, targetFloderPath, iOSAdditional, androidAddi
             if languageName == 'en':
                 path = targetFloderPath + "/android/values/"
             StringsXmlFileUtil.writeToFile(
-                keys, values, path, androidAdditional)
+                keys, values, path, "/strings.xml", androidAdditional)
 
 
 def main():

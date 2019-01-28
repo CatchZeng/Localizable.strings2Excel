@@ -110,7 +110,7 @@ def convertToMultipleFiles(stringsDir, targetDir):
             workbook.save(filePath)
 
     print "Convert %s successfully! you can see xls file in %s" % (
-        stringsDir, filePath)
+        stringsDir, destDir)
 
 # Start convert .strings files to xls
 

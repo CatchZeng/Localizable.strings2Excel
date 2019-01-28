@@ -58,7 +58,6 @@ class StringsFileUtil:
             except UnicodeDecodeError:
                 print('got unicode error with %s , trying different encoding' % e)
             else:
-                print('opening the file with encoding:  %s ' % e)
                 break
 
         # 2.Remove comments

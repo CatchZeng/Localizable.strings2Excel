@@ -3,9 +3,11 @@
 import codecs
 from optparse import OptionParser
 from StringsXmlFileUtil import StringsXmlFileUtil
-from StringsFileUtil import  StringsFileUtil
+from StringsFileUtil import StringsFileUtil
 
-#Add command option
+# Add command option
+
+
 def addParser():
     parser = OptionParser()
 
@@ -40,9 +42,11 @@ def startConvert(options):
         print "Read Localizable.strings finish"
 
         if targetFilePath is not None:
-            StringsXmlFileUtil.writeToFile(keys,values,targetFilePath,androidAdditional)
+            StringsXmlFileUtil.writeToFile(
+                keys, values, targetFilePath, "/strings.xml", androidAdditional)
 
-            print "Convert successfully! you can see strings.xml in %s" % (targetFilePath)
+            print "Convert successfully! you can see strings.xml in %s" % (
+                targetFilePath)
 
         else:
             print "Target file path can not be empty! try -h for help."
@@ -54,5 +58,6 @@ def startConvert(options):
 def main():
     options = addParser()
     startConvert(options)
+
 
 main()
