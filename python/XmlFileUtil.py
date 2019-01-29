@@ -15,8 +15,6 @@ class XmlFileUtil:
         if not os.path.exists(directory):
             os.makedirs(directory)
 
-        Log.info("Creating android file:" + directory + "/" + filename)
-
         fo = open(directory + "/" + filename, "wb")
 
         stringEncoding = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n"
@@ -55,7 +53,6 @@ class XmlFileUtil:
             item = itemlist[index]
             key = item.getAttribute("name")
             value = item.firstChild.data
-            Log.info("key:" + key + " value:" + value)
             keys.append(key)
             values.append(value)
 

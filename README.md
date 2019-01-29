@@ -80,6 +80,33 @@ Convert examples/output/strings-files-to-xls_20190129_165830/ successfully! you 
 
 ![](imgs/1.0.0/xls-2-strings.jpg)
 
+### 3.Convert **android** xml files to **excel** files
+
+```
+$ python python/Xml2Xls.py -f examples/android/ -t examples/output
+
+options: {'fileDir': 'examples/android/', 'targetDir': 'examples/output', 'excelStorageForm': 'multiple'}, args: []
+
+Start converting
+Convert examples/android/ successfully! you can see xls file in examples/output/xml-files-to-xls_20190129_172938
+```
+
+![](imgs/1.0.0/xml-2-xls.jpg)
+
+### 4.Convert **excel** files to **android** xml files
+
+```
+$ python python/Xls2Xml.py -f examples/output/xml-files-to-xls_20190129_172938/ -t examples/output/
+
+options: {'fileDir': 'examples/output/xml-files-to-xls_20190129_172938/', 'targetDir': 'examples/output/', 'excelStorageForm': 'multiple', 'additional': None}, args
+: []
+
+Start converting
+Convert examples/output/xml-files-to-xls_20190129_172938/ successfully! you can xml files in examples/output//xls-files-to-xml_20190129_174207
+```
+
+![](imgs/1.0.0/xls-2-xml.jpg)
+
 ### 5.Convert **iOS** strings files to **android** xml files.
 
 ```shell

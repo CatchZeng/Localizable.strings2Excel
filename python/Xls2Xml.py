@@ -62,6 +62,8 @@ def convertFromSingleForm(options, fileDir, targetDir):
                 filename = file.replace(".xls", ".xml")
                 XmlFileUtil.writeToFile(
                     keys, values, path, filename, options.additional)
+    print "Convert %s successfully! you can xml files in %s" % (
+        fileDir, targetDir)
 
 
 def convertFromMultipleForm(options, fileDir, targetDir):
@@ -79,23 +81,32 @@ def convertFromMultipleForm(options, fileDir, targetDir):
             if not os.path.exists(path):
                 os.makedirs(path)
 
-            Log.info("Reading %s" % file)
-
             for table in xlsFileUtil.getAllTables():
-                Log.info("Sheet %s of %s" % (table.name, file))
-
                 keys = table.col_values(0)
                 values = table.col_values(1)
                 filename = table.name.replace(".strings", ".xml")
 
                 XmlFileUtil.writeToFile(
                     keys, values, path, filename, options.additional)
+    print "Convert %s successfully! you can xml files in %s" % (
+        fileDir, targetDir)
 
 
 def startConvert(options):
     fileDir = options.fileDir
+    targetDir = options.targetDir
 
-    targetDir = options.targetDir + "/xls-files-to-xml_" + \
+    print "Start converting"
+
+    if fileDir is None:
+        print "xls files directory can not be empty! try -h for help."
+        return
+
+    if targetDir is None:
+        print "Target file path can not be empty! try -h for help."
+        return
+
+    targetDir = targetDir + "/xls-files-to-xml_" + \
         time.strftime("%Y%m%d_%H%M%S")
     if not os.path.exists(targetDir):
         os.makedirs(targetDir)

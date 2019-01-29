@@ -112,6 +112,8 @@ def startConvert(options):
     fileDir = options.fileDir
     targetDir = options.targetDir
 
+    print "Start converting"
+
     if fileDir is None:
         print "strings.xml files directory can not be empty! try -h for help."
         return
