@@ -2,7 +2,7 @@
 
 from optparse import OptionParser
 from XlsFileUtil import XlsFileUtil
-from StringsXmlFileUtil import StringsXmlFileUtil
+from XmlFileUtil import XmlFileUtil
 from StringsFileUtil import StringsFileUtil
 from Log import Log
 import os

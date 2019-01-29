@@ -5,7 +5,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/LocalizableStringsXml.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xls/Localizable.xls" afterPath="$PROJECT_DIR$/xls/Localizable.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/StringsXmlFileUtil.py" afterPath="$PROJECT_DIR$/python/StringsXmlFileUtil.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/XmlFileUtil.py" afterPath="$PROJECT_DIR$/python/XmlFileUtil.py" />
     </list>
     <ignored path="Localizable.strings2Excel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +20,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$LocalizableBack.coverage" NAME="LocalizableBack Coverage Results" MODIFIED="1483542762990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$LocalizableToStringXml.coverage" NAME="LocalizableToStringXml Coverage Results" MODIFIED="1483543640447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Localizable.strings2Excel$StringsXmlFileUtil.coverage" NAME="StringsXmlFileUtil Coverage Results" MODIFIED="1509430392193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
+    <SUITE FILE_PATH="coverage/Localizable.strings2Excel$XmlFileUtil.coverage" NAME="XmlFileUtil Coverage Results" MODIFIED="1509430392193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$Localizable.coverage" NAME="Localizable Coverage Results" MODIFIED="1483542928449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$LocalizableStringsXml.coverage" NAME="LocalizableStringsXml Coverage Results" MODIFIED="1509431742693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -68,7 +68,7 @@
         <option value="$PROJECT_DIR$/python/LocalizableToStringXml.py" />
         <option value="$PROJECT_DIR$/python/LocalizableBack.py" />
         <option value="$PROJECT_DIR$/python/StringsFileUtil.py" />
-        <option value="$PROJECT_DIR$/python/StringsXmlFileUtil.py" />
+        <option value="$PROJECT_DIR$/python/XmlFileUtil.py" />
         <option value="$PROJECT_DIR$/python/LocalizableStringsXml.py" />
       </list>
     </option>
@@ -297,7 +297,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.LocalizableStringsXml">
-    <configuration default="false" name="StringsXmlFileUtil" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="XmlFileUtil" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -310,7 +310,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Localizable.strings2Excel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/StringsXmlFileUtil.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/XmlFileUtil.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -600,11 +600,11 @@
       <item index="1" class="java.lang.String" itemvalue="Python.LocalizableStringsXml" />
       <item index="2" class="java.lang.String" itemvalue="Python.LocalizableBack" />
       <item index="3" class="java.lang.String" itemvalue="Python.LocalizableToStringXml" />
-      <item index="4" class="java.lang.String" itemvalue="Python.StringsXmlFileUtil" />
+      <item index="4" class="java.lang.String" itemvalue="Python.XmlFileUtil" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.StringsXmlFileUtil" />
+        <item index="0" class="java.lang.String" itemvalue="Python.XmlFileUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -680,7 +680,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/python/StringsXmlFileUtil.py</url>
+          <url>file://$PROJECT_DIR$/python/XmlFileUtil.py</url>
           <line>20</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -780,7 +780,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/StringsXmlFileUtil.py">
+    <entry file="file://$PROJECT_DIR$/python/XmlFileUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
@@ -937,7 +937,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/StringsXmlFileUtil.py">
+    <entry file="file://$PROJECT_DIR$/python/XmlFileUtil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />

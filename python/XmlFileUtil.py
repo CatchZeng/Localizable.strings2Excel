@@ -7,7 +7,7 @@ import xml.dom.minidom
 import re
 
 
-class StringsXmlFileUtil:
+class XmlFileUtil:
     'android strings.xml file util'
 
     @staticmethod

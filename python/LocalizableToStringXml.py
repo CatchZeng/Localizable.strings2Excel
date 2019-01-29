@@ -2,7 +2,7 @@
 
 import codecs
 from optparse import OptionParser
-from StringsXmlFileUtil import StringsXmlFileUtil
+from XmlFileUtil import XmlFileUtil
 from StringsFileUtil import StringsFileUtil
 
 # Add command option
@@ -42,7 +42,7 @@ def startConvert(options):
         print "Read Localizable.strings finish"
 
         if targetFilePath is not None:
-            StringsXmlFileUtil.writeToFile(
+            XmlFileUtil.writeToFile(
                 keys, values, targetFilePath, "/strings.xml", androidAdditional)
 
             print "Convert successfully! you can see strings.xml in %s" % (

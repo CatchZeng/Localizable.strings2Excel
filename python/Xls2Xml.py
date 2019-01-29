@@ -2,7 +2,7 @@
 
 from optparse import OptionParser
 from XlsFileUtil import XlsFileUtil
-from StringsXmlFileUtil import StringsXmlFileUtil
+from XmlFileUtil import XmlFileUtil
 from StringsFileUtil import StringsFileUtil
 from Log import Log
 import os
@@ -60,7 +60,7 @@ def convertFromSingleForm(options, fileDir, targetDir):
                 if languageName == 'en':
                     path = targetDir + "/values/"
                 filename = file.replace(".xls", ".xml")
-                StringsXmlFileUtil.writeToFile(
+                XmlFileUtil.writeToFile(
                     keys, values, path, filename, options.additional)
 
 
@@ -88,7 +88,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 values = table.col_values(1)
                 filename = table.name.replace(".strings", ".xml")
 
-                StringsXmlFileUtil.writeToFile(
+                XmlFileUtil.writeToFile(
                     keys, values, path, filename, options.additional)
 
 

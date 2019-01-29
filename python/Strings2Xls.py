@@ -34,8 +34,6 @@ def addParser():
 
 
 def convertToSingleFile(stringsDir, targetDir):
-    index = 0
-
     destDir = targetDir + "/strings-files-to-xls_" + \
         time.strftime("%Y%m%d_%H%M%S")
     if not os.path.exists(destDir):
