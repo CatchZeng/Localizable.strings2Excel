@@ -1,3 +1,11 @@
+#### V1.0.0
+
+Refactoring
+
+#### V0.7.0
+
+Bug fixes
+
 #### V0.6.0
 
 1.Add Extract strings to xls & Convert xls to strings. -- [Buguibu](https://github.com/buguibu)
@@ -14,7 +22,7 @@
 
 1.Support Localizable.strings to android strings.xml file.
 
-#### V0.2.0 
+#### V0.2.0
 
 1.Fix bugs.
 
@@ -22,6 +30,6 @@
 
 3.Add -t(target file path )、-f(source file path) configuration for python files.
 
-#### V0.1.0 
+#### V0.1.0
 
 Add project.
