@@ -1,187 +1,140 @@
-## Localizable.strings2Excel
+# Localizable.strings2Excel
 
-iOS 本地化文件（Localizable.strings）与 Excel 互相转换 & Localizable.strings 转换成 android 的 strings.xml 文件的 Python 脚本工具
+iOS 本地化文件（.strings）与 Excel 互相转换 & android 的 strings.xml 与 Excel 互相转换 & iOS 本地化文件 转换成 android 的 strings.xml 文件的 Python 脚本工具
 
-#### 将 iOS 多个国家的 Localizable.strings 转换成 excel
+## 特性
 
-![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stoe.jpg)
+- [x] 支持将 **iOS** strings 文件转换成 **excel** 文件
+- [x] 支持将 **excel** 文件转换成 **iOS** strings 文件
+- [x] 支持将 **android** xml 文件转换成 **excel** 文件
+- [x] 支持将 **excel** 文件转换成 **android** xml 文件
+- [x] 支持将 **iOS** strings 文件转换成 **android** xml 文件
 
-#### 将 Android 多个国家的 strings.xml 转换成 excel
+## 当前版本
 
-![strings to excel](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/atox.jpg)
+**V1.0.0**
 
-#### 将 excel 转换成 iOS 多个国家的 Localizable.strings 以及 Android 的 strings.xml
+## 所需环境
 
-![excel to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/etos.jpg)
+### 1.检查 python 版本
 
-#### 将单个 iOS 的 Localizable.strings 转换成 Android 的 strings.xml
+python 版本必须是 2.x
 
-![strings to android xml](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/stox.jpg)
+```
+$ python --version
+Python 2.7.10
+```
 
-#### 将 iOS 多个国家的 Localizable.strings 转换成多个 excel 文件
+### 2.检查 pip(python 包管理器)
 
-![extract strings to xls](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/strings2xls.jpg)
+```
+$ pip --version
+pip 19.0 from /Library/Python/2.7/site-packages/pip (python 2.7)
+```
 
-#### 将多个 excel 文件转换成 iOS 多个国家的 Localizable.strings
+如果没有安装 pip
 
-![convert xls to strings](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/xls2strings.jpg)
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+sudo python get-pip.py
+```
+
+### 3.安装 pyexcelerator
+
+```
+sudo pip install pyExcelerator
+```
+
+### 4.安装 xlrd
+
+```
+sudo pip install xlrd
+```
+
+## 使用说明
+
+### 1.将 **iOS** strings 文件转换成 **excel** 文件
+
+```
+$ python python/Strings2Xls.py -f examples/ios/ -t examples/output
+Start converting
+Convert examples/ios/ successfully! you can see xls file in examples/output/strings-files-to-xls_20190129_165830
+```
+
+![](imgs/1.0.0/strings-2-xls.jpg)
+
+### 2.将 **excel** 文件转换成 **iOS** strings 文件
+
+```
+$ python python/Xls2Strings.py -f examples/output/strings-files-to-xls_20190129_165830/ -t examples/ou
+tput/
+
+options: {'fileDir': 'examples/output/strings-files-to-xls_20190129_165830/', 'targetDir': 'examples/output/', 'excelStorageForm': 'multiple', 'additional': None
+}, args: []
+
+Start converting
+Convert examples/output/strings-files-to-xls_20190129_165830/ successfully! you can see strings file in examples/output//xls-files-to-strings_20190129_171146
+```
+
+![](imgs/1.0.0/xls-2-strings.jpg)
+
+### 3.将 **android** xml 文件转换成 **excel** 文件
+
+```
+$ python python/Xml2Xls.py -f examples/android/ -t examples/output
+
+options: {'fileDir': 'examples/android/', 'targetDir': 'examples/output', 'excelStorageForm': 'multiple'}, args: []
+
+Start converting
+Convert examples/android/ successfully! you can see xls file in examples/output/xml-files-to-xls_20190129_172938
+```
+
+![](imgs/1.0.0/xml-2-xls.jpg)
+
+### 4.将 **excel** 文件转换成 **android** xml 文件
+
+```
+$ python python/Xls2Xml.py -f examples/output/xml-files-to-xls_20190129_172938/ -t examples/output/
+
+options: {'fileDir': 'examples/output/xml-files-to-xls_20190129_172938/', 'targetDir': 'examples/output/', 'excelStorageForm': 'multiple', 'additional': None}, args
+: []
+
+Start converting
+Convert examples/output/xml-files-to-xls_20190129_172938/ successfully! you can xml files in examples/output//xls-files-to-xml_20190129_174207
+```
+
+![](imgs/1.0.0/xls-2-xml.jpg)
+
+### 5.将 **iOS** strings 文件转换成 **android** xml 文件
+
+```shell
+$ python python/Strings2Xml.py -f examples/ios/en.lproj/ -t examples/output/
+
+options: {'fileDir': 'examples/ios/en.lproj/', 'targetDir': 'examples/output/', 'additional': None}, args: []
+
+
+Creating android file:examples/output//strings-files-to-xml_20190129_164122/Localizable.xml
+
+
+Creating android file:examples/output//strings-files-to-xml_20190129_164122/InfoPlist.xml
+
+
+Convert successfully! you can see xml files in examples/output//strings-files-to-xml_20190129_164122
+
+```
+
+![](imgs/1.0.0/strings-2-xml.jpg)
 
 ## ChangeLog
 
-[ChangeLog](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/CHANGELOG-CN.md)
+[ChangeLog](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/CHANGELOG.md)
 
-## 使用方法
+## 贡献者
 
-### 1.安装 pyexcelerator 组件
-
-切换到 pyexcelerator-0.6.4.1 目录,执行 sudo python setup.py install 安装
-
-![安装pyexcelerator](https://github.com/CatchZeng/Localizable.strings2Excel/blob/master/imgs/installpy.jpg)
-
-### 2.安装 xld 组件
-
-切换到 xlrd-1.0.0 目录,执行 sudo python setup.py install 安装
-
-### 3.使用脚本
-
-#### 将 iOS 多个国家的 Localizable.strings 转换成 excel
-
-```shell
-python Localizable.py -f xxx/xxx -t xxx/xxx.xls
-
-$ python Localizable.py -h
-Usage: Localizable.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filesDirectory, --filesDirectory=filesDirectory
-                        Localizable.strings files directory.
-  -t targetFilePath, --targetFilePath=targetFilePath
-                        Target File (xls) Path.
-```
-
-#### 将 Android 多个国家的 strings.xml 转换成 excel
-
-```shell
-python LocalizableStringsXml.py -f xxx/xxx -t xxx/xxx.xls
-
-python LocalizableStringsXml.py -h
-Usage: LocalizableStringsXml.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filesDirectory, --filesDirectory=filesDirectory
-                        StringsXml files directory.
-  -t targetFilePath, --targetFilePath=targetFilePath
-                        Target File (xls) Path.
-```
-
-#### 将 excel 转换成 iOS 多个国家的 Localizable.strings 以及 Android 的 strings.xml
-
-```shell
-python LocalizableBack.py -f xxx/xxx.xls -t xxx/xxx
-
-$ python LocalizableBack.py -h
-Usage: LocalizableBack.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filePath, --filePath=filePath
-                        original.xls File Path.
-  -t targetFloderPath, --targetFloderPath=targetFloderPath
-                        Target Floder Path.
-  -i iOSAdditional, --iOSAdditional=iOSAdditional
-                        iOS additional info.
-  -a androidAdditional, --androidAdditional=androidAdditional
-                        android additional info.
-```
-
-#### 将单个 iOS 的 Localizable.strings 转换成 Android 的 strings.xml
-
-```shell
-python Strings2Xml.py -f xxx/xxx.strings -t xxx/xxx.xml
-
-python Strings2Xml.py -h
-Usage: Strings2Xml.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filePath, --filePath=filePath
-                        Localizable.strings File Path.
-  -t targetFilePath, --targetFilePath=targetFilePath
-                        Target File (strings.xml) Path.
-  -a androidAdditional, --androidAdditional=androidAdditional
-                        android additional info.
-```
-
-#### 将 iOS 多个国家的 Localizable.strings 转换成多个 excel 文件
-
-```shell
-python Strings2Xls.py -f xxx/xxx/ -t xxx/
-
-$ python Strings2Xls.py -h
-Usage: Strings2Xls.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filesDirectory, --filesDirectory=filesDirectory
-                        Localizable.strings files directory.
-  -t targetFilePath, --targetFilePath=targetFilePath
-                        Target File (xls) Path.
-```
-
-#### 将多个 excel 文件转换成 iOS 多个国家的 Localizable.strings
-
-```shell
-python Xls2Strings.py -f xxx/xxx -t xxx/
-
-$ python Xls2Strings.py -h
-Usage: Xls2Strings.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filePath, --filePath=filePath
-                        original.xls File Path.
-  -t targetFloderPath, --targetFloderPath=targetFloderPath
-                        Target Floder Path.
-  -i iOSAdditional, --iOSAdditional=iOSAdditional
-                        iOS additional info.
-  -a androidAdditional, --androidAdditional=androidAdditional
-                        android additional info.
-```
-
-#### 将 iOS 项目多语言中的所有\*.strings 转换成对应的多个 excel 文件
-
-```shell
-python StringsAll2Xls.py -f xxx/xxx/ -t xxx/
-
-$ python StringsAll2Xls.py -h
-Usage: StringsAll2Xls.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filesDirectory, --filesDirectory=filesDirectory
-                        Project files (strings) directory.
-  -t targetDirectory, --targetDirectory=targetDirectory
-                        Target files (xls) directory.
-```
-
-#### 反转，将转出的 excel 文件内容替换回原先的 strings 文件中
-
-```shell
-python XlsMatch2Strings.py -f xxx/ -t xxx/xxx/
-
-$ python XlsMatch2Strings.py -h
-Usage: XlsMatch2Strings.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f filePath, --filePath=filePath
-                        original.xls File Path.
-  -t targetFloderPath, --targetFloderPath=targetFloderPath
-                        Target Floder Path.
-```
-
-## 鸣谢
-
+- [CatchZeng](https://github.com/CatchZeng)
 - [Buguibu](https://github.com/buguibu)
+- [vgutierrezNologis](https://github.com/vgutierrezNologis)
+- [linguinan](https://github.com/linguinan)
+- [qiusuo8](https://github.com/qiusuo8)
+- [light-bo](https://github.com/light-bo)
+- [bryant1410](https://github.com/bryant1410)

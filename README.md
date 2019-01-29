@@ -134,3 +134,8 @@ Convert successfully! you can see xml files in examples/output//strings-files-to
 ## Thanks
 
 - [Buguibu](https://github.com/buguibu)
+- [vgutierrezNologis](https://github.com/vgutierrezNologis)
+- [linguinan](https://github.com/linguinan)
+- [qiusuo8](https://github.com/qiusuo8)
+- [light-bo](https://github.com/light-bo)
+- [bryant1410](https://github.com/bryant1410)
