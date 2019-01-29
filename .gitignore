@@ -107,3 +107,4 @@ venv.bak/
 pyexcelerator-0.6.4.1/
 xlrd-1.0.0/
 python/*.py[cod]
+examples/output
