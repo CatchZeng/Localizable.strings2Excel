@@ -19,7 +19,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$LocalizableBack.coverage" NAME="LocalizableBack Coverage Results" MODIFIED="1483542762990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
-    <SUITE FILE_PATH="coverage/Localizable.strings2Excel$LocalizableToStringXml.coverage" NAME="LocalizableToStringXml Coverage Results" MODIFIED="1483543640447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Localizable.strings2Excel$Strings2Xml.coverage" NAME="Strings2Xml Coverage Results" MODIFIED="1483543640447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$XmlFileUtil.coverage" NAME="XmlFileUtil Coverage Results" MODIFIED="1509430392193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/python" />
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$Localizable.coverage" NAME="Localizable Coverage Results" MODIFIED="1483542928449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Localizable.strings2Excel$LocalizableStringsXml.coverage" NAME="LocalizableStringsXml Coverage Results" MODIFIED="1509431742693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -63,9 +63,9 @@
         <option value="$PROJECT_DIR$/Localizable.py" />
         <option value="$PROJECT_DIR$/strings/Localizable.strings" />
         <option value="$PROJECT_DIR$/LocalizableBack.py" />
-        <option value="$PROJECT_DIR$/LocalizableToStringXml.py" />
+        <option value="$PROJECT_DIR$/Strings2Xml.py" />
         <option value="$PROJECT_DIR$/python/Localizable.py" />
-        <option value="$PROJECT_DIR$/python/LocalizableToStringXml.py" />
+        <option value="$PROJECT_DIR$/python/Strings2Xml.py" />
         <option value="$PROJECT_DIR$/python/LocalizableBack.py" />
         <option value="$PROJECT_DIR$/python/StringsFileUtil.py" />
         <option value="$PROJECT_DIR$/python/XmlFileUtil.py" />
@@ -577,7 +577,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="LocalizableToStringXml" type="PythonConfigurationType" factoryName="Python">
+    <configuration default="false" name="Strings2Xml" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -590,7 +590,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Localizable.strings2Excel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/LocalizableToStringXml.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/python/Strings2Xml.py" />
       <option name="PARAMETERS" value="-f $PROJECT_DIR$/ios/en.lproj/Localizable.strings -t $USER_HOME$/Desktop" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -599,7 +599,7 @@
       <item index="0" class="java.lang.String" itemvalue="Python.Localizable" />
       <item index="1" class="java.lang.String" itemvalue="Python.LocalizableStringsXml" />
       <item index="2" class="java.lang.String" itemvalue="Python.LocalizableBack" />
-      <item index="3" class="java.lang.String" itemvalue="Python.LocalizableToStringXml" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Strings2Xml" />
       <item index="4" class="java.lang.String" itemvalue="Python.XmlFileUtil" />
     </list>
     <recent_temporary>
@@ -766,7 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/LocalizableToStringXml.py">
+    <entry file="file://$PROJECT_DIR$/python/Strings2Xml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
@@ -802,7 +802,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xml/strings.xml" />
-    <entry file="file://$PROJECT_DIR$/LocalizableToStringXml.py" />
+    <entry file="file://$PROJECT_DIR$/Strings2Xml.py" />
     <entry file="file://$PROJECT_DIR$/imgs/stoe.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -826,7 +826,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/strings/LocalizableBack.strings" />
-    <entry file="file://$PROJECT_DIR$/LocalizableToStringXml.py" />
+    <entry file="file://$PROJECT_DIR$/Strings2Xml.py" />
     <entry file="file://$PROJECT_DIR$/LocalizableBack.py" />
     <entry file="file://$PROJECT_DIR$/Localizable.py" />
     <entry file="file://$PROJECT_DIR$/xml/strings.xml" />
@@ -947,7 +947,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/LocalizableToStringXml.py">
+    <entry file="file://$PROJECT_DIR$/python/Strings2Xml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="571">
           <caret line="55" column="25" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />

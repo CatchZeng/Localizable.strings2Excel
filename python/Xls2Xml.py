@@ -95,7 +95,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
 def startConvert(options):
     fileDir = options.fileDir
 
-    targetDir = options.targetDir + "/xls-files-to-xmls_" + \
+    targetDir = options.targetDir + "/xls-files-to-xml_" + \
         time.strftime("%Y%m%d_%H%M%S")
     if not os.path.exists(targetDir):
         os.makedirs(targetDir)

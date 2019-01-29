@@ -119,10 +119,10 @@ Options:
 #### Convert iOS Localizable.strings file to Android strings.xml file.
 
 ```shell
-python LocalizableToStringXml.py -f xxx/xxx.strings -t xxx/xxx.xml
+python Strings2Xml.py -f xxx/xxx.strings -t xxx/xxx.xml
 
-python LocalizableToStringXml.py -h
-Usage: LocalizableToStringXml.py [options]
+python Strings2Xml.py -h
+Usage: Strings2Xml.py [options]
 
 Options:
   -h, --help            show this help message and exit
