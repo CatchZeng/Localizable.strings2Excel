@@ -54,6 +54,8 @@ def convertFromSingleForm(options, fileDir, targetDir):
                 del values[0]
                 StringsFileUtil.writeToFile(
                     keys, values, targetDir + "/"+languageName+".lproj/", file.replace(".xls", "")+".strings", options.additional)
+    print "Convert %s successfully! you can see strings file in %s" % (
+        fileDir, targetDir)
 
 
 def convertFromMultipleForm(options, fileDir, targetDir):
@@ -65,11 +67,7 @@ def convertFromMultipleForm(options, fileDir, targetDir):
             if not os.path.exists(langFolderPath):
                 os.makedirs(langFolderPath)
 
-            Log.info("Reading %s" % file)
-
             for sheet in xlsFileUtil.getAllTables():
-                Log.info("Sheet %s of %s" % (sheet.name, file))
-
                 iosDestFilePath = langFolderPath + "/" + sheet.name
                 iosFileManager = open(iosDestFilePath, "wb")
                 for row in sheet.get_rows():
@@ -79,13 +77,25 @@ def convertFromMultipleForm(options, fileDir, targetDir):
                 if options.additional is not None:
                     iosFileManager.write(options.additional)
                 iosFileManager.close()
-                Log.info("File translate to %s" % iosDestFilePath)
+    print "Convert %s successfully! you can see strings file in %s" % (
+        fileDir, targetDir)
 
 
 def startConvert(options):
     fileDir = options.fileDir
+    targetDir = options.targetDir
 
-    targetDir = options.targetDir + "/xls-files-to-strings_" + \
+    print "Start converting"
+
+    if fileDir is None:
+        print "xls files directory can not be empty! try -h for help."
+        return
+
+    if targetDir is None:
+        print "Target file directory can not be empty! try -h for help."
+        return
+
+    targetDir = targetDir + "/xls-files-to-strings_" + \
         time.strftime("%Y%m%d_%H%M%S")
     if not os.path.exists(targetDir):
         os.makedirs(targetDir)

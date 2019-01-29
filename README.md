@@ -12,6 +12,10 @@ Python command line tool for conversion between iOS strings files and excel file
 - [x] Support convert **excel** files to **android** xml files.
 - [x] Support convert **iOS** strings files to **android** xml files.
 
+## Version
+
+**V1.0.0**
+
 ## Required
 
 ### 1.Check python version
@@ -51,7 +55,32 @@ sudo pip install xlrd
 
 ## Usage
 
-### 5. convert **iOS** strings files to **android** xml files.
+### 1.Convert **iOS** strings files to **excel** files.
+
+```
+$ python python/Strings2Xls.py -f examples/ios/ -t examples/output
+Start converting
+Convert examples/ios/ successfully! you can see xls file in examples/output/strings-files-to-xls_20190129_165830
+```
+
+![](imgs/1.0.0/strings-2-xls.jpg)
+
+### 2.Convert **excel** files to **iOS** strings files
+
+```
+$ python python/Xls2Strings.py -f examples/output/strings-files-to-xls_20190129_165830/ -t examples/ou
+tput/
+
+options: {'fileDir': 'examples/output/strings-files-to-xls_20190129_165830/', 'targetDir': 'examples/output/', 'excelStorageForm': 'multiple', 'additional': None
+}, args: []
+
+Start converting
+Convert examples/output/strings-files-to-xls_20190129_165830/ successfully! you can see strings file in examples/output//xls-files-to-strings_20190129_171146
+```
+
+![](imgs/1.0.0/xls-2-strings.jpg)
+
+### 5.Convert **iOS** strings files to **android** xml files.
 
 ```shell
 $ python python/Strings2Xml.py -f examples/ios/en.lproj/ -t examples/output/
