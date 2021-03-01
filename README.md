@@ -37,7 +37,7 @@ pip 19.0 from /Library/Python/2.7/site-packages/pip (python 2.7)
 if pip is not installed
 
 ```
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+curl https://bootstrap.pypa.io/2.7/get-pip.py -o get-pip.py
 sudo python get-pip.py
 ```
 
